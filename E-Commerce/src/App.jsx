@@ -1,4 +1,4 @@
-import {BrowserRouter, Routes, Route, BrowserRouter} from 'react-router-dom'
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Home from './Home'
 import About from './About'
 import Products from './Products'
@@ -35,18 +35,18 @@ function App(){
   };
   return (
     <ThemeProvider theme={theme}>
-    <BrowserRouter>
-      <GlobalStyle/>
-        <Header/>
-          <Routes>
-            <Route path='/'  element={<Home/>}/>
-              <Route path='/about'  element={<About/>}/>
-                <Route path='/products'  element={<Products/>}/>
-                  <Route path='/contact'  element={<Contact/>}/>
-                    <Route path='/errorpage' element={<ErrorPage/>}/>
-                      <Route path='/singleproduct/:id' element={<SingleProduct/>}/>
-      </Routes>
-    </BrowserRouter>
+      <BrowserRouter>
+        <GlobalStyle/>
+          <Header/>
+            <Routes>
+              <Route path='/'  element={<Home/>}/>
+                <Route path='/about'  element={<About/>}/>
+                  <Route path='/products'  element={<Products/>}/>
+                    <Route path='/contact'  element={<Contact/>}/>
+                      <Route path='/errorpage' element={<ErrorPage/>}/>
+                        <Route path='/singleproduct/:id' element={<SingleProduct/>}/>
+            </Routes>
+      </BrowserRouter>
     </ThemeProvider>
   )
 }
