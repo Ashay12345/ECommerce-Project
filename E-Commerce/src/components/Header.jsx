@@ -22,6 +22,7 @@ const Header = () => {
             <NavLink to='/'>
                 <img src="/images/logo.png"/>
             </NavLink>
+                <Nav/>
         </MainHeader>
     </div>
   )
