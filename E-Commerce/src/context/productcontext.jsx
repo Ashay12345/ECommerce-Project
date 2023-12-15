@@ -8,4 +8,4 @@ const AppProvider = ({children}) =>{
         </>
     )
 }
-export {AppProvider}
+export {AppProvider,AppContext}
