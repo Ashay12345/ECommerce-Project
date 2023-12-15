@@ -6,6 +6,8 @@ import Contact from './Contact'
 import ErrorPage from './ErrorPage'
 import SingleProduct from './SingleProduct'
 import {ThemeProvider} from 'styled-components'
+import {GlobalStyle} from './GlobalStyle'
+import Header from './components/Header'
 function App(){
   const theme = {
     colors: {
@@ -34,13 +36,15 @@ function App(){
   return (
     <ThemeProvider theme={theme}>
     <BrowserRouter>
-      <Routes>
-        <Route path='/'  element={<Home/>}/>
-          <Route path='/about'  element={<About/>}/>
-            <Route path='/products'  element={<Products/>}/>
-              <Route path='/contact'  element={<Contact/>}/>
-                <Route path='/errorpage' element={<ErrorPage/>}/>
-                  <Route path='/singleproduct/:id' element={<SingleProduct/>}/>
+      <GlobalStyle/>
+        <Header/>
+          <Routes>
+            <Route path='/'  element={<Home/>}/>
+              <Route path='/about'  element={<About/>}/>
+                <Route path='/products'  element={<Products/>}/>
+                  <Route path='/contact'  element={<Contact/>}/>
+                    <Route path='/errorpage' element={<ErrorPage/>}/>
+                      <Route path='/singleproduct/:id' element={<SingleProduct/>}/>
       </Routes>
     </BrowserRouter>
     </ThemeProvider>

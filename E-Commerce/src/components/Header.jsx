@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import {NavLink} from 'react-router-dom'
 const MainHeader = styled.header`
   padding: 0 4.8rem;
   height: 10rem;
@@ -16,7 +17,11 @@ const MainHeader = styled.header`
 const Header = () => {
   return (
     <div>
-        <MainHeader></MainHeader>
+        <MainHeader>
+            <NavLink to='/'>
+                <img src="/images/logo.png"/>
+            </NavLink>
+        </MainHeader>
     </div>
   )
 }
