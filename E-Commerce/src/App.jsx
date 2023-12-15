@@ -46,6 +46,7 @@ function App(){
                       <Route path='/errorpage' element={<ErrorPage/>}/>
                         <Route path='/singleproduct/:id' element={<SingleProduct/>}/>
             </Routes>
+              <Footer/>
       </BrowserRouter>
     </ThemeProvider>
   )
