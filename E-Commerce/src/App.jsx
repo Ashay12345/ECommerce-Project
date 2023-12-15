@@ -5,6 +5,7 @@ import Products from './Products'
 import Contact from './Contact'
 import ErrorPage from './ErrorPage'
 import SingleProduct from './SingleProduct'
+import {ThemeProvider} from 'styled-components'
 function App(){
   const theme = {
     colors: {
@@ -31,6 +32,7 @@ function App(){
     },
   };
   return (
+    <ThemeProvider theme={theme}>
     <BrowserRouter>
       <Routes>
         <Route path='/'  element={<Home/>}/>
@@ -41,6 +43,7 @@ function App(){
                   <Route path='/singleproduct/:id' element={<SingleProduct/>}/>
       </Routes>
     </BrowserRouter>
+    </ThemeProvider>
   )
 }
 
