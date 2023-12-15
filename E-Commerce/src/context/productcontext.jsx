@@ -1,11 +1,14 @@
-import { createContext } from "react";
+import { createContext, useContext} from "react";
 
 const AppContext = createContext()
 const AppProvider = ({children}) =>{
     return(
         <>
-            <AppContext.Provider value="Ashay Gupta">{children}</AppContext.Provider>
+            <AppContext.Provider value={{myName:"Ashay Gupta"}}>{children}</AppContext.Provider>
         </>
     )
 }
-export {AppProvider,AppContext}
+const useProductContext = () =>{
+    return useContext(AppContext)
+}
+export {AppProvider,AppContext,useProductContext}
