@@ -8,6 +8,7 @@ import SingleProduct from './SingleProduct'
 import {ThemeProvider} from 'styled-components'
 import {GlobalStyle} from './GlobalStyle'
 import Header from './components/Header'
+import Footer from './components/Footer'
 function App(){
   const theme = {
     colors: {
